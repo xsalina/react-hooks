@@ -1,18 +1,42 @@
-import React,{useState} from 'react';
+/*
+ * @Date: 2020-09-25 22:23:31
+ * @Autor: 肖月萍
+ * @Description: Do not edit
+ * @LastEditors: 肖月萍
+ * @LastEditTime: 2020-09-25 22:38:48
+ */
+import React,{useState,useEffect} from 'react';
+import Hooks from './components/hooks'
 import './App.css';
 
 function App() {
   const [count,setCount] = useState(0);
+  const [showHooks,setShowHooks] = useState(true)
+  useEffect(() => {
+    console.log('生命周期DidMount')
+  }, [])
+
+  useEffect(() => {
+      if(count > 10){
+        console.log('监听count大于了10，相当于shouldComponentUpdate')
+      }
+  }, [count])
+
+  useEffect(() => {
+    return () => {
+      console.log('我是子组件，我被摧毁了   执行 销毁函数')
+    }
+  }, [showHooks])
+
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-        <button onClick={()=> setCount (count - 1)}>减去</button>
+          <button onClick={()=> setCount (count - 1)}>减去</button>
           <button onClick={()=> setCount (count + 1)}>加上</button>
-          <p>you click {count} times</p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        
+          <div>you click {count} times</div>
+          <div onClick={() => setShowHooks(false)}>点击销毁子组件</div>
+          
+        {showHooks && <Hooks count={count} />}
       </header>
     </div>
   );
