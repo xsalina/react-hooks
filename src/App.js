@@ -3,11 +3,12 @@
  * @Autor: 肖月萍
  * @Description: Do not edit
  * @LastEditors: 肖月萍
- * @LastEditTime: 2020-09-27 21:31:58
+ * @LastEditTime: 2020-09-28 22:11:54
  */
 import React,{useState,useEffect} from 'react';
 import Hooks from './components/hooks'
 import DidUpdate from './components/didUpdate.jsx'
+import Memo from './components/memo'
 import './App.css';
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           
         {showHooks && <Hooks count={count} />}
         <DidUpdate />
+        <Memo />
       </header>
     </div>
   );
