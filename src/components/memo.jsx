@@ -25,7 +25,7 @@ export default () => {
 }
 
 //memo可用于子组件，子组件传过来的值如果在父组件发生变化了，才会渲染，
-//如果没有发生变化则不会渲染。就把这个组件放入memo函数内就可以了
+//如果没有发生变化则不会渲染。就把这个组件放入memo函数内就可以了  memo(childrenComponent)
 export const ChildCom = memo(
     (props) => {
         console.log('子组件渲染了',props)
