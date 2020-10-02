@@ -1,7 +1,6 @@
 import React,{useReducer,memo} from 'react'
 
 const reducer =(states,action) =>{
-    console.log('reduce值要改变了',states,action)
     const {type,payload} = action;
     switch(type){
         case'addName':
