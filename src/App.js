@@ -3,13 +3,14 @@
  * @Autor: 肖月萍
  * @Description: Do not edit
  * @LastEditors: 肖月萍
- * @LastEditTime: 2020-09-29 22:14:30
+ * @LastEditTime: 2020-10-02 12:22:58
  */
 import React,{useState,useEffect} from 'react';
 import Hooks from './components/hooks'
 import DidUpdate from './components/didUpdate.jsx'
 import Memo from './components/memo'
 import UseCallBack from './components/userCallback'
+import UseReducer from './components/useReducer'
 import './App.css';
 
 function App() {
@@ -44,6 +45,10 @@ function App() {
         <Memo />
 
         <UseCallBack />
+        
+
+        <hr />
+        <UseReducer />
       </header>
     </div>
   );

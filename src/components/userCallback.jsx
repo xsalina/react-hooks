@@ -13,11 +13,17 @@ export default (props) => {
     const clearFun = useCallback(() => {
         setName('')
     },[])
+
+    useEffect(() => {
+        console.log(999,'name改变了')
+    }, [name])
     return <div>
         <input type="text" value={name} onChange ={(e) => setName(e.target.value)} />
         <input type="text" value={lastName} onChange ={(e) => setlastName(e.target.value)} />
 
         <ClearValue claerFun={clearFun} />
+
+
 
     </div>
 }
