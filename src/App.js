@@ -3,7 +3,7 @@
  * @Autor: 肖月萍
  * @Description: Do not edit
  * @LastEditors: 肖月萍
- * @LastEditTime: 2020-10-02 13:40:44
+ * @LastEditTime: 2020-10-07 14:48:01
  */
 import React,{useState,useEffect} from 'react';
 import Hooks from './components/hooks'
@@ -12,6 +12,7 @@ import Memo from './components/memo'
 import UseCallBack from './components/userCallback'
 import UseReducer from './components/useReducer'
 import UseContext,{ChildrenContext} from'./components/useContext'
+import UseRef from'./components/useRef'
 import './App.css';
 
 export const {Provider,Consumer} = React.createContext('')
@@ -41,7 +42,7 @@ function App() {
     <div className="App">
     
       <header className="App-header">
-      <div>父组件的值77777777{context}</div>
+      {/* <div>父组件的值77777777{context}</div>
           <button onClick={()=> setCount (count - 1)}>减去</button>
           <button onClick={()=> setCount (count + 1)}>加上</button>
           <div>you click {count} times</div>
@@ -49,15 +50,16 @@ function App() {
 
           
           
-        {showHooks && <Hooks count={count} />}
-        <DidUpdate />
+        {showHooks && <Hooks count={count} />} */}
+        {/* <DidUpdate />
         <Memo />
 
         <UseCallBack />
         
 
         <hr />
-        <UseReducer />
+        <UseReducer /> */}
+        <UseRef />
       </header>
       <hr />
       
