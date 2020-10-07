@@ -3,12 +3,13 @@
  * @Autor: 肖月萍
  * @Description: Do not edit
  * @LastEditors: 肖月萍
- * @LastEditTime: 2020-10-07 15:00:55
+ * @LastEditTime: 2020-10-07 16:08:05
  */
 import React,{useState,useEffect} from 'react';
 import Hooks from './components/hooks'
 import DidUpdate from './components/didUpdate.jsx'
 import Memo from './components/memo'
+import Memo1 from './components/memo1'
 import UseCallBack from './components/userCallback'
 import UseReducer from './components/useReducer'
 import UseContext,{ChildrenContext} from'./components/useContext'
@@ -62,6 +63,7 @@ function App() {
         <UseReducer /> */}
         <UseRef />
         <UseRef1 />
+        <Memo1 />
       </header>
       <hr />
       
