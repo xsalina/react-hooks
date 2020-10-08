@@ -3,7 +3,7 @@
  * @Autor: 肖月萍
  * @Description: Do not edit
  * @LastEditors: 肖月萍
- * @LastEditTime: 2020-10-08 21:35:56
+ * @LastEditTime: 2020-10-08 22:38:29
  */
 import React,{useState,useEffect} from 'react';
 import Hooks from './components/hooks'
@@ -16,6 +16,7 @@ import UseContext,{ChildrenContext} from'./components/useContext'
 import UseRef from'./components/useRef'
 import UseRef1 from'./components/useRef1'
 import UserReducerAddUseContext from './components/useReducerAdduseContext'
+import Window from './components/window'
 import './App.css';
 
 export const {Provider,Consumer} = React.createContext('')
@@ -66,6 +67,7 @@ function App() {
         <UseRef1 />
         <Memo1 />
         <UserReducerAddUseContext />
+        <Window />
       </header>
       <hr />
       
