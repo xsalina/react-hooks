@@ -5,7 +5,7 @@
  * @,@LastEditors: ,: 肖月萍
  * @,@LastEditTime: ,: 2020-12-29 22:13:41
  */
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect,useRef} from 'react';
 import Hooks from './components/hooks'
 import DidUpdate from './components/didUpdate.jsx'
 import Memo from './components/memo'
@@ -16,6 +16,7 @@ import UseContext,{ChildrenContext} from'./components/useContext'
 import UseRef from'./components/useRef'
 import UseRef1 from'./components/useRef1'
 import UserReducerAddUseContext from './components/useReducerAdduseContext'
+import Userf2 from './components/useRef2'
 import Window from './components/window'
 import './App.css';
 
@@ -39,7 +40,7 @@ function App() {
       console.log('我是子组件，我被摧毁了   执行 销毁函数')
     }
   }, [showHooks])
-
+  const gloable = useRef()
   return (
     <Provider  value={{context,setContext}}>
 
@@ -68,8 +69,15 @@ function App() {
         <Memo1 />
         <UserReducerAddUseContext />
         <Window />
+
+        <Userf2 ref={gloable} />
+      <button className="btn" onClick={() => {console.log(555,gloable)}}>
+        点击我给子组件
+      </button>
       </header>
       <hr />
+      <hr />
+     
       
     </div>
     </Provider>
