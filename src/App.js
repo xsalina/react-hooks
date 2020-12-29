@@ -2,8 +2,8 @@
  * @Date: 2020-09-25 22:23:31
  * @Autor: 肖月萍
  * @Description: Do not edit
- * @LastEditors: 肖月萍
- * @LastEditTime: 2020-10-08 22:38:29
+ * @,@LastEditors: ,: 肖月萍
+ * @,@LastEditTime: ,: 2020-12-29 22:13:41
  */
 import React,{useState,useEffect} from 'react';
 import Hooks from './components/hooks'
@@ -33,7 +33,7 @@ function App() {
         console.log('监听count大于了10，相当于shouldComponentUpdate')
       }
   }, [count])
-
+  console.log(2347238)
   useEffect(() => {
     return () => {
       console.log('我是子组件，我被摧毁了   执行 销毁函数')
