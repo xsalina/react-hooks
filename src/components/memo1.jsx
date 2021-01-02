@@ -1,7 +1,7 @@
-import React,{useState,useEffect,useRef,memo} from 'react';
+import React,{useState,useEffect,useRef,memo,Fragment} from 'react';
 export default (props) => {
     const [leval,setLeval] = useState(0)
-    return <>
+    return <Fragment>
     <hr />
     <h4>{leval}</h4>
     <input 
@@ -13,7 +13,7 @@ export default (props) => {
 
     />
     <ChildMemoChild leval={leval} />
-    </>
+    </Fragment>
 
 }
 
